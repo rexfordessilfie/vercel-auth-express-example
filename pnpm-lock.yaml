@@ -6,6 +6,7 @@ specifiers:
   '@prettier/plugin-pug': ^3.0.0
   '@types/express': ^4.17.21
   '@types/morgan': ^1.9.9
+  '@types/node': ^20.10.7
   '@types/pug': ^2.0.10
   '@typescript-eslint/eslint-plugin': ^6.18.0
   '@typescript-eslint/parser': ^6.18.0
@@ -34,6 +35,7 @@ devDependencies:
   '@prettier/plugin-pug': 3.0.0_prettier@3.1.1
   '@types/express': 4.17.21
   '@types/morgan': 1.9.9
+  '@types/node': 20.10.7
   '@types/pug': 2.0.10
   '@typescript-eslint/eslint-plugin': 6.18.1_xvcddqnm46wrdutftnlnk2ywy4
   '@typescript-eslint/parser': 6.18.1_xdgzedli73k7lw4xlyzszm74om
