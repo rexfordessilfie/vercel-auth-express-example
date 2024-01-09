@@ -1,6 +1,6 @@
 import { AuthConfig } from "@auth/core"
-import GitHub from "@auth/core/providers/github"
-import Google from "@auth/core/providers/google"
+import GitHub from "@auth/express/providers/github"
+import Google from "@auth/express/providers/google"
 
 export const authConfig: AuthConfig = {
   providers: [
