@@ -74,5 +74,3 @@ app.get("/", async (req: Request, res: Response) => {
 // Error handlers
 app.use(errorNotFoundHandler)
 app.use(errorHandler)
-
-module.exports = app
