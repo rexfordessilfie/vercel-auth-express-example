@@ -74,3 +74,5 @@ app.get("/", async (req: Request, res: Response) => {
 // Error handlers
 app.use(errorNotFoundHandler)
 app.use(errorHandler)
+
+console.log(process.env.TEST_VAR)
