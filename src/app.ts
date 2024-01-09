@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express"
+import express from "express"
 import logger from "morgan"
 import * as path from "path"
 
@@ -52,19 +52,15 @@ app.use("/api/auth/*", ExpressAuth(authConfig))
 
 // Routes
 
-app.get("/protected", async (_req: Request, res: Response) => {
+app.get("/protected", async (_req, res) => {
   res.render("protected", { session: res.locals.session })
 })
 
-app.get(
-  "/api/protected",
-  authenticatedUser,
-  async (req: Request, res: Response) => {
-    res.json(res.locals.session)
-  },
-)
+app.get("/api/protected", authenticatedUser, async (_req, res) => {
+  res.json(res.locals.session)
+})
 
-app.get("/", async (req: Request, res: Response) => {
+app.get("/", async (_req, res) => {
   res.render("index", {
     title: "Express Auth Example",
     user: res.locals.session?.user,

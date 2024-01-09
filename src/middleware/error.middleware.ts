@@ -1,11 +1,14 @@
-import { NextFunction, Request, Response } from "express"
+import {
+  NextFunction,
+  Request as ExpressRequest,
+  Response as ExpressResponse,
+} from "express"
 import { HttpError, NotFoundError } from "../errors.js"
 
 export const errorHandler = (
   err: HttpError | Error,
-  _req: Request,
-  res: Response,
-  next: NextFunction,
+  _req: ExpressRequest,
+  res: ExpressResponse,
 ): void => {
   // Render the error page
   res.status(("status" in err && err.status) || 500)
@@ -16,8 +19,8 @@ export const errorHandler = (
 }
 
 export const errorNotFoundHandler = (
-  _req: Request,
-  _res: Response,
+  _req: ExpressRequest,
+  _res: ExpressResponse,
   next: NextFunction,
 ): void => {
   next(new NotFoundError("Not Found"))
